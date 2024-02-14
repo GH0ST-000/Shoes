@@ -123,7 +123,7 @@
 <script>
     const currentUrl = window.location.pathname.split('/')[2];
     document.getElementById('page_url').innerText=currentUrl;
-    if (currentUrl === 'products' || currentUrl === 'orders'){
+    if (currentUrl === 'products' || currentUrl === 'orders' || currentUrl==='stocks'){
         document.getElementById('list_of').innerText=currentUrl.charAt(0).toUpperCase()+currentUrl.slice(1) +' '+ 'List'
     }else {
         document.getElementById('page_url').innerText='Dashboard';

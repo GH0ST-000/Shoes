@@ -66,4 +66,16 @@ class ProductController extends Controller
             'quantity'=>$request->quantity
         ];
     }
+
+    public function show($id): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        $product = Products::findorfail($id);
+        return view('Admin.pages.EditProduct',[
+            'tags' => Tags::all(),
+            'sizes'=>Size::all(),
+            'brands'=>Brand::all(),
+            'categories' => Category::all(),
+            'product'=>$product
+        ]);
+    }
 }

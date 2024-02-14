@@ -14,13 +14,13 @@ class BrandSeeder extends Seeder
         Brand::truncate();
 
         $brands = [
-            ['brand_name'=>'Adidas'],
-            [  'brand_name'=>'Nike'],
-            ['brand_name'=>'Vans'],
+             ['brand_name'=>'Adidas'],
+             [  'brand_name'=>'Nike'],
+             ['brand_name'=>'Vans'],
              [ 'brand_name'=>'New balance'],
              [ 'brand_name'=>'Puma'],
-            [ 'brand_name'=>'Lacoste'],
-            ['brand_name'=>'Converse'],
+             [ 'brand_name'=>'Lacoste'],
+             ['brand_name'=>'Converse'],
         ];
 
         foreach ($brands as $key => $value) {

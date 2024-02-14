@@ -28,12 +28,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{url('admin/stocks')}}" class="nav-link text-white "  role="button" aria-expanded="false">
-                    <i class="material-icons-round opacity-10">content_paste</i>
-                    <span class="nav-link-text ms-2 ps-1">Stock Management</span>
-                </a>
-            </li>
-            <li class="nav-item">
                 <a href="{{url('admin/orders')}}" class="nav-link text-white " aria-controls="dashboardsExamples" role="button" aria-expanded="false">
                     <i class="material-icons-round opacity-10">money</i>
                     <span class="nav-link-text ms-2 ps-1">Order</span>

@@ -4,18 +4,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StockController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -47,10 +39,14 @@ Route::prefix('admin')->middleware(['admin'])->group(function () {
 
     Route::controller(ProductController::class)->group(function(){
         Route::get('add_product','Add')->name('admin.add_product');
+        Route::get('edit_product/{id}','show')->name('admin.edit_product');
         Route::post('store_product','store')->name('admin.store_product');
         Route::get('delete_product/{id}','delete')->name('admin.delete_product');
 
     });
+
+
+
     Route::controller(ImageController::class)->group(function(){
         Route::post('/upload-chunk', 'handleFileChunk')->name('admin.upload-chunk');
     });
